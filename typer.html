@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyIntro</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="gfavi.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Get jQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script>
+    $(function(){
+
+        $("#typed").typed({
+            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+            backDelay: 500,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+    <link href="main.css" rel="stylesheet"/>
+    <style>
+        body {
+                background: #cb2d3e; /* fallback for old browsers */
+                background: -webkit-linear-gradient(to left, #cb2d3e , #ef473a); /* Chrome 10-25, Safari 5.1-6 */
+                background: linear-gradient(to left, #cb2d3e , #ef473a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                background-size: cover;
+                background-position: center;
+        }
+        /* code for animated blinking cursor */
+        .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+		.fa {
+ 			width: 60px;
+ 			display: block;
+ 			text-align: center;
+ 			color:#000000;
+ 			font:normal 45px 'FontAwesome';
+ 			line-height:60px;
+ 			text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+		}
+		.fa-angle-double-down:before {content: "\f103";}
+        
+        .bounce {
+ 			position: absolute;
+ 			bottom: 30px;
+ 			left: 50% ;
+ 			width: 60px;
+ 			height: 60px ;
+ 			margin-left:-30px;
+ 			border: 2px solid #000000;
+           -webkit-border-radius:50%;
+           -moz-border-radius:50%;
+           -ms-border-radius:50%;
+		    border-radius:50%;
+ 			animation: bounce 2s infinite;
+            -webkit-animation: bounce 2s infinite;
+            -moz-animation: bounce 2s infinite;
+            -o-animation: bounce 2s infinite;
+ 		}
+ 
+		@-webkit-keyframes bounce {
+			 0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+			 40% {-webkit-transform: translateY(-30px);}
+ 			 60% {-webkit-transform: translateY(-15px);}
+		}
+ 
+		@-moz-keyframes bounce {
+			 0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+ 			40% {-moz-transform: translateY(-30px);}
+ 			60% {-moz-transform: translateY(-15px);}
+		}	
+ 
+		@-o-keyframes bounce {
+			 0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+ 			40% {-o-transform: translateY(-30px);}
+ 			60% {-o-transform: translateY(-15px);}
+		}
+		@keyframes bounce {
+ 			0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+ 		    40% {transform: translateY(-30px);}
+ 			60% {transform: translateY(-15px);}
+		}
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <h1 class="h1">Well, Let me introduce myself first !</h1>
+        <br><br>
+        <div class="type-wrap">
+            <div id="typed-strings">
+                <span>Hey friends !  <strong>Gagan Ganapathy</strong> here ! :)</span>
+                <p>Im 18. (YEAHH !!)</p>
+                <p>Im an Undergrad at IIIT Allahabad . . .</p>
+                <p>. . . and what else</p>
+                <p>hmmmm ....</p>
+                <p>Okayy ... and and and .. </p>
+                <p> I'm a Scorpio :p </p>
+                <p> annnddd . . . </p>
+                <p> an avid CS:GO player ! :D </p>
+                <p> I think thats enough for now :p </p>
+                <p><strong>CLICK BELOW TO CONTINUE . . .</strong></p>
+            </div>
+            <span id="typed" style="white-space:pre;"></span>
+        </div>
+    </div>
+    <a href="main_page.html"><div class="bounce"><i class="fa fa-angle-double-down"></i></div></a>
+</body>
+</html>
